@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/blackish"
+    tools:context=".MainActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/workingsTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:lines="2"
+            android:maxLines="2"
+            android:textColor="@color/white"
+            android:textAlignment="textEnd"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toTopOf="@id/resultsTV"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/resultsTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:lines="1"
+            android:maxLines="1"
+            android:textColor="@color/white"
+            android:textAlignment="textEnd"
+            android:textSize="40sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        style="@style/buttonRow">
+        
+        <Button
+            style="@style/buttonNumber"
+            android:textColor="@color/red"
+            android:onClick="allClearAction"
+            android:text="C"
+            tools:ignore="HardcodedText" />
+        <Button
+            style="@style/buttonNumber"
+            android:textColor="@color/red"
+            android:onClick="backSpaceAction"
+            android:text="DEL"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            style="@style/buttonNumber"
+            android:text=""
+            tools:ignore="HardcodedText,SpeakableTextPresentCheck" />
+        <Button
+            style="@style/buttonOperator"
+            android:text="/"
+            tools:ignore="HardcodedText" />
+
+    </LinearLayout>
+    <LinearLayout
+        style="@style/buttonRow">
+
+        <Button
+            style="@style/buttonNumber"
+            android:text="7"
+            tools:ignore="HardcodedText" />
+        <Button
+            style="@style/buttonNumber"
+            android:text="8"
+            tools:ignore="HardcodedText" />
+        <Button
+            style="@style/buttonNumber"
+            android:text="9"
+            tools:ignore="HardcodedText" />
+        <Button
+            style="@style/buttonOperator"
+            android:text="x"
+            tools:ignore="HardcodedText" />
+
+    </LinearLayout>
+    <LinearLayout
+        style="@style/buttonRow">
+
+        <Button
+            style="@style/buttonNumber"
+            android:text="4"
+            tools:ignore="HardcodedText" />
+        <Button
+            style="@style/buttonNumber"
+            android:text="5"
+            tools:ignore="HardcodedText" />
+        <Button
+            style="@style/buttonNumber"
+            android:text="6"
+            tools:ignore="HardcodedText" />
+        <Button
+            style="@style/buttonOperator"
+            android:text="-"
+            tools:ignore="HardcodedText" />
+
+    </LinearLayout>
+    <LinearLayout
+        style="@style/buttonRow">
+
+        <Button
+            style="@style/buttonNumber"
+            android:text="1"
+            tools:ignore="HardcodedText" />
+        <Button
+            style="@style/buttonNumber"
+            android:text="2"
+            tools:ignore="HardcodedText" />
+        <Button
+            style="@style/buttonNumber"
+            android:text="3"
+            tools:ignore="HardcodedText" />
+        <Button
+            style="@style/buttonOperator"
+            android:text="+"
+            tools:ignore="HardcodedText" />
+
+    </LinearLayout>
+    <LinearLayout
+        style="@style/buttonRow">
+
+        <Button
+            style="@style/buttonNumber"
+            android:text="."
+            tools:ignore="HardcodedText" />
+        <Button
+            style="@style/buttonNumber"
+            android:text="0"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            style="@style/buttonNumber"
+            android:background="@color/orange"
+            android:onClick="equalsAction"
+            android:text="="
+            android:textSize="40sp"
+            tools:ignore="HardcodedText,TextContrastCheck" />
+
+    </LinearLayout>
+
+</LinearLayout>
